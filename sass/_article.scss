@@ -17,7 +17,7 @@ article {
       @extend %titleTag;
     }
 
-    > h2 {
+    > h1 {
       @include headerTag(2rem, 2.5rem);
       max-width: 860px;
 
