@@ -65,12 +65,14 @@ Navigation.prototype = {
     this.btnNewsltr.addEventListener(
       "click",
       function() {
+        this.newsLtr.setAttribute('style', 'display:block;');
         this.newsLtr.setAttribute("class", "newsletter active");
       }.bind(this)
     );
     this.btnNewsltrAlt.addEventListener(
       "click",
-      function() {
+      function () {
+        this.newsLtr.setAttribute('style', 'display:block;');
         this.btnMenu.setAttribute("data-state", "off");
         this.body.setAttribute("class", "hideScroll");
         this.navMobile.setAttribute("class", "navMobile");
@@ -79,7 +81,8 @@ Navigation.prototype = {
     );
     this.btnNltrClose.addEventListener(
       "click",
-      function() {
+      function () {
+        this.newsLtr.removeAttribute('style');
         this.newsLtr.setAttribute("class", "newsletter");
         this.wrapper.setAttribute("class", "wrapper");
         this.body.removeAttribute("class");
