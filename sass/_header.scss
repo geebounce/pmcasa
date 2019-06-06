@@ -211,7 +211,7 @@ header.collapsed {
 
 nav.navMobile {
   height: 100%;
-  display: block;
+  display: none;
   visibility: hidden;
   transform: translateY(-100%);
   font-family: $fontCabin;
