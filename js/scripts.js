@@ -18,7 +18,8 @@ var Navigation = function() {
 };
 
 Navigation.prototype = {
-  setup: function() {
+  setup: function () {
+    this.navMobile.setAttribute('style', 'display:block;');
     this.btnFind.addEventListener(
       "click",
       function() {
