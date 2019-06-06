@@ -1,0 +1,205 @@
+// MIXINS
+
+@mixin widthWrapper($width) {
+  width: 100%;
+  max-width: $width;
+  margin: auto;
+}
+
+@mixin flexCenter($flow) {
+  display: flex;
+  align-items: center;
+  flex-flow: $flow;
+  justify-content: center;
+}
+
+@mixin mQ($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin textInput($fSize, $grow) {
+  height: 60px;
+  font-family: $fontHandlee;
+  font-size: $fSize;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 10px 20px;
+  flex-grow: $grow;
+  box-sizing: border-box;
+  -moz-appearance: textfield;
+  background: darken(#fff, 1%);
+  color: $mainGreen;
+
+  &::placeholder {
+    font-size: 85%;
+    color: darken($lightGray, 30%);
+  }
+}
+
+@mixin headerTag($fSize, $lHeight) {
+  max-width: 760px;
+  margin: auto;
+  font-size: $fSize;
+  line-height: $lHeight;
+  letter-spacing: 2px;
+  font-family: $fontHandlee;
+  margin-bottom: 10px;
+  cursor: default;
+}
+
+@mixin paragraphTag($fSize) {
+  font-family: $fontCabin;
+  max-width: 760px;
+  margin: auto;
+  font-size: $fSize;
+  line-height: 1.8rem;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-bottom: 30px;
+  cursor: default;
+  color: $mainGreen;
+
+  @include mQ(800px) {
+    font-size: 90%;
+    letter-spacing: 1px;
+  }
+}
+
+@mixin articleHeader($fSize, $lHeight) {
+  font-family: $fontHandlee;
+  max-width: 760px;
+  margin: auto;
+  font-size: $fSize;
+  letter-spacing: 1px;
+  line-height: $lHeight;
+  margin-bottom: 14px;
+  font-weight: bold;
+  cursor: default;
+  color: $mainGreen;
+}
+
+// PLACEHOLDERS
+
+%buttonFind {
+  font-family: $fontCabin;
+  width: 60px;
+  height: 60px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: $mainGreen;
+  color: white;
+
+  &:hover {
+    background: lighten($mainGreen, 3%);
+  }
+
+  &:active {
+    background: lighten($mainGreen, 10%);
+  }
+}
+
+%buttonWhite {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 18px 40px;
+  margin: 0 10px;
+  background: white;
+  border: 1px solid #e8e8e8;
+  color: lighten($mediumGray, 10%);
+  transition: all 0.6s;
+
+  &:hover {
+    background: $mainGreen;
+    color: white;
+
+    i {
+      color: white;
+    }
+  }
+}
+
+%buttonOrange {
+  font-family: $fontHandlee;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 20px 50px;
+  border: 1px solid lighten($darkOrange, 40%);
+  box-shadow: 0px 4px 5px rgba(227, 227, 227, 0.58);
+  background: $lightOrange;
+  color: $darkOrange;
+  transition: all 0.2s;
+
+  &:hover {
+    color: darken($darkOrange, 20%);
+    background: lighten($lightOrange, 2%);
+  }
+
+  &:active {
+    box-shadow: 0px 0px 0px rgba(227, 227, 227, 0.58);
+  }
+}
+
+%greenTag {
+  height: 40px;
+  position: absolute;
+  font-family: $fontCabin;
+  font-size: 0.6rem;
+  line-height: 0.6rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  color: white;
+  background: $mainGreen;
+
+  @include mQ(800px) {
+    height: 30px;
+    padding: 10px 16px;
+    color: $mainGreen;
+    background: $clearWhite;
+  }
+}
+
+%categoryTag {
+  font-size: 0.76rem;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  cursor: default;
+  color: $mainGreen;
+}
+
+%titleTag {
+  font-family: $fontCabin;
+  display: inline-block;
+  padding: 16px;
+  font-size: 1.3rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 30px;
+  cursor: default;
+  color: white;
+  background: $mainGreen;
+
+  @include mQ(800px) {
+    font-size: 0.8rem;
+  }
+}
+
+%pixelBorder {
+  background-image: url("data:image/png;base64,#{$pixelBorder}");
+}
+
+%pixelBorderTB {
+  background-image: url("data:image/png;base64,#{$pixelBorder}"),
+    url("data:image/png;base64,#{$pixelBorder}");
+  background-position: top left, bottom left;
+  background-repeat: repeat-x, repeat-x;
+}

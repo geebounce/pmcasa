@@ -1,0 +1,131 @@
+footer.footer {
+  font-family: $fontCabin;
+  background: $mainGreen;
+
+  > div {
+    padding: 20px;
+    box-sizing: border-box;
+    @include flexCenter(column);
+    @include widthWrapper(1400px);
+    text-align: center;
+
+    > a {
+      width: 68px;
+      margin-bottom: 40px;
+
+      img {
+        width: 100%;
+        display: block;
+        transition: all 0.2s;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    nav {
+      @include flexCenter(row);
+      margin-bottom: 40px;
+
+      @include mQ(800px) {
+        flex-flow: column;
+        margin-bottom: 20px;
+      }
+
+      a {
+        font-size: 0.86rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin: 0 20px 30px 20px;
+        color: white;
+        transition: all 0.2s;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    p {
+      font-size: 0.9rem;
+      line-height: 1.2rem;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      cursor: default;
+      color: white;
+    }
+
+    div {
+      width: 100%;
+      display: block;
+      margin-bottom: 40px;
+
+      form {
+        @include flexCenter(row);
+      }
+
+      form input {
+        @include textInput(1rem, 0);
+        flex-basis: 300px;
+        flex-grow: 0;
+        flex-shrink: 1;
+        text-align: center;
+        margin-right: 10px;
+
+        @include mQ(800px) {
+          margin-right: 0px;
+        }
+        
+        @include mQ(370px) {
+          &::placeholder {
+            color: transparent;
+          }
+        }
+      }
+
+      form button {
+        @extend %buttonFind;
+        width: auto;
+        padding: 0 16px;
+        font-weight: bold;
+        background: $lightGray;
+        color: $mediumGray;
+        transition: all 0.2s;
+
+        &:hover {
+          background: darken($lightGray, 10%);
+        }
+      }
+
+      strong {
+        font-family: $fontHandlee;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        vertical-align: middle;
+        cursor: default;
+        color: white;
+      }
+
+      a {
+        display: inline-block;
+        font-size: 1.5rem;
+        margin: 10px 15px;
+        color: white;
+        transition: all 0.2s;
+
+        &:hover {
+          opacity: 0.5;
+        }
+
+        &:active i.fa-facebook-f {
+          color: $facebookBlue;
+        }
+
+        &:active i.fa-twitter {
+          color: $twitterBlue;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.catSelect {
+  font-family: $fontHandlee;
+  max-width: 860px;
+  padding: 16px 20px;
+  margin: auto auto 50px auto;
+  text-align: center;
+  text-transform: capitalize;
+  @extend %pixelBorderTB;
+
+  span, button {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    letter-spacing: 2px;
+  }
+
+  span {
+    cursor: default;
+    color: $mediumGray;
+  }
+
+  button {
+    margin-left: 10px;
+    color: $mainGreen;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    i {
+      font-size: 70%;
+      margin-left: 10px;
+    }
+  }
+
+  div {
+    display: block;
+    margin-top: 24px;
+
+    a {
+      display: inline-block;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      padding: 10px 16px;
+      margin: 0 5px 10px 5px;
+      border: 1px solid $mainGreen;
+      color: $mainGreen;
+      transition: all 0.2s;
+
+      &:hover {
+        color: white;
+        background: $mainGreen;
+      }
+    }
+  }
+
+  div.inactive {
+    display: none;
+  }
+}

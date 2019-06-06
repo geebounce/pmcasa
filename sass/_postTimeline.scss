@@ -1,0 +1,104 @@
+.postTimeline {
+  @include flexCenter(column);
+  padding: 30px 20px;
+  background-color: $paperWhite;
+
+  > div {
+    @include widthWrapper(1400px);
+    text-align: center;
+  }
+
+  .postItem {
+    font-family: $fontCabin;
+    max-width: 860px;
+    margin: 40px auto auto auto;
+    padding-bottom: 40px;
+    @extend %pixelBorder;
+    background-position: left bottom;
+    background-repeat: repeat-x;
+
+    h6 {
+      @extend %categoryTag;
+    }
+
+    strong {
+      @extend %titleTag;
+    }
+
+    h2 {
+      @include headerTag(1.7rem, 2.5rem);
+
+      @include mQ(800px) {
+        font-size: 1.4rem;
+        line-height: 2rem;
+      }
+    }
+
+    h2 a {
+      color: $mainGreen;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    p {
+      @include paragraphTag(1rem);
+    }
+
+    a.more {
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 10px 20px;
+      color: $mainGreen;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .pagination {
+    font-family: $fontCabin;
+    @include flexCenter(row);
+    margin: 60px 0;
+
+    a {
+      @extend %buttonWhite;
+
+      i {
+        color: $mainGreen;
+      }
+
+      @include mQ(800px) {
+        
+        letter-spacing: 2px;
+        padding: 18px 20px;
+        margin: 0 5px;
+      }
+
+      @include mQ(370px) {
+        font-size: 0.7rem;
+        letter-spacing: 0px;
+        
+      }
+    }
+
+    a:first-of-type i {
+      margin-right: 10px;
+    }
+
+    a:last-of-type i {
+      margin-left: 10px;
+    }
+  }
+}

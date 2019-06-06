@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101D17" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cabin:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Handlee&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/blog.css" />
+    <title>PM Casa - Blog - Lorem ipsum dolor sit amet</title>
+    <script
+      src="//platform-api.sharethis.com/js/sharethis.js#property=5cf71ef94351e9001264f4fb&product=inline-share-buttons"
+      async="async"
+    ></script>
+  </head>
+  <body>
+    <!-- WRAPPER -->
+    <div class="wrapper">
+      <!-- HEADER & NAV -->
+      <header>
+        <div class="headerWrap">
+          <a href="#">
+            <img src="./svg/PMCasa_logo.svg" alt="PM Casa" />
+          </a>
+
+          <nav>
+            <a href="#">quiénes somos</a>
+            <a href="#">productos</a>
+            <a href="#">blog</a>
+            <a href="#">contacto</a>
+            <button id="btnNewsltr">newsletter</button>
+            <button id="btnFind" data-state="off">
+              <i class="fas fa-search"></i>
+            </button>
+          </nav>
+
+          <span class="btnMenu">
+            <button id="btnMenu" data-state="off">
+              <i class="fas fa-bars"></i>
+            </button>
+          </span>
+
+          <span class="btnCart">
+            <a href="#">
+              <i class="fas fa-shopping-cart"></i>
+              <span>4</span>
+            </a>
+          </span>
+        </div>
+        <div class="headerFind">
+          <form action="mainChimpForm.php">
+            <input id="findDesktop" type="text" placeholder="BUSCAR..." />
+            <button type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+          <button id="findCloseBtn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </header>
+      <nav class="navMobile">
+        <span>
+          <button id="btnMenuClose">
+            <i class="fas fa-times"></i>
+          </button>
+        </span>
+        <a href="#">
+          <img src="./svg/PMCasa_logo_alt.svg" alt="PM Casa Logo" />
+        </a>
+        <div class="find">
+          <form action="mainChimpForm.php">
+            <input type="text" placeholder="BUSCAR..." />
+            <button type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+        <ul>
+          <li>
+            <a href="#">inicio</a>
+          </li>
+          <li>
+            <a href="#">quiénes somos</a>
+          </li>
+          <li>
+            <a href="#">productos</a>
+          </li>
+          <li>
+            <a href="#">blog</a>
+          </li>
+          <li>
+            <a href="#">contacto</a>
+          </li>
+          <li>
+            <button id="btnNewsltrAlt">newsletter</button>
+          </li>
+        </ul>
+        <footer>
+          <strong>SÍGUENOS EN...</strong>
+          <br />
+          <a href="#" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </footer>
+      </nav>
+      <!-- HEADER & NAV END -->
+
+      <!-- ARTICLE -->
+      <article>
+        <div>
+          <h6>categoría post</h6>
+          <strong>
+            <time datetime="2019-05-08">may 8 - 2019</time>
+          </strong>
+          <h2>Lorem ipsum dolor sit amet consectetur adipiscing elit.</h2>
+          <div class="share">
+            <div class="sharethis-inline-share-buttons"></div>
+            <span>compartir</span>
+          </div>
+          <img
+            class="featured"
+            src="./img/postItem1.jpg"
+            alt="Image Description"
+          />
+          <div class="articleWrap">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+              nibh nisl, finibus eget euismod vel, auctor ac sem. Donec euismod
+              nisl ac odio placerat porta. Maecenas sed orci et neque tempor
+              sollicitudin. Nunc magna urna, varius ac mi eget, sagittis
+              vehicula ex. Sed vel finibus massa. Morbi nec dolor ac diam
+              imperdiet ullamcorper. Donec condimentum mollis accumsan.
+            </p>
+            <p>
+              Curabitur felis sem, pretium in orci id, pellentesque maximus
+              enim. Maecenas ut nisi eget dui fringilla fermentum. Aliquam ut
+              commodo elit, quis varius mi. Vestibulum in ornare risus, ut
+              dapibus sem. Maecenas pharetra ante nec velit congue efficitur.
+              Integer vulputate pulvinar mollis. Quisque ac rutrum tellus, in
+              efficitur sapien. Morbi accumsan et purus pharetra malesuada.
+              Quisque quis molestie neque.
+            </p>
+            <p>
+              Maecenas ut neque fermentum, hendrerit justo sit amet, auctor
+              tortor. Sed semper venenatis lacus, vitae aliquam justo congue
+              sed. Sed eu accumsan nulla. Vivamus interdum efficitur ultrices.
+              Ut auctor risus vitae tempus vulputate. In vitae enim facilisis,
+              pretium lacus vel, blandit justo. Praesent dapibus non justo a
+              rhoncus. Duis laoreet aliquet nibh quis molestie. Donec eu libero
+              suscipit, hendrerit metus vitae, posuere nunc. Duis rhoncus
+              faucibus tortor, ut cursus ex faucibus quis.
+            </p>
+
+            <figure>
+              <img src="./img/postItem1.jpg" alt="Image Description" />
+              <figcaption>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+              </figcaption>
+            </figure>
+
+            <p>
+              Aliquam condimentum metus et massa ornare faucibus. Quisque
+              vestibulum iaculis mauris eu imperdiet. Maecenas id dui id risus
+              accumsan tempor. Sed sit amet justo sit amet ante imperdiet mattis
+              ac non tellus. Cras vitae turpis pulvinar ligula lobortis congue.
+              Vivamus felis libero, lacinia vel urna sit amet, mollis ultricies
+              eros. Quisque sem urna, sollicitudin porta elit vitae, pretium
+              faucibus ipsum.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- ONTRAPORT FORM -->
+      <section>
+        <div class="opForm">
+          <div>
+            <div>
+              <h2>Lorem ipsum dolor sit amet consectetur</h2>
+              <figure>
+                <img src="./img/form.jpg" alt="Image description" />
+                <figcaption>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aenean nec orci dapibus, interdum ex sit amet, dapibus tellus.
+                </figcaption>
+              </figure>
+            </div>
+            <div>
+              <form action="ontraportForm.php">
+                <input type="text" name="name" placeholder="Nombre" />
+                <input type="text" name="lastName" placeholder="Apellido" />
+                <input type="email" name="email" placeholder="Correo" />
+                <input
+                  type="number"
+                  name="postCode"
+                  placeholder="Código Postal"
+                />
+                <button type="submit">enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ONTRAPORT FORM END -->
+
+      <!-- RELATED & MORE -->
+      <section>
+        <div class="related">
+          <div>
+            <h3>posts relacionados</h3>
+            <div class="relPosts">
+              <div>
+                <a href="#">
+                  <img src="./img/related1.jpg" alt="Image description" />
+                  <span
+                    >Lorem ipsum dolor sit amet consectetur adipiscing
+                    elit.</span
+                  >
+                </a>
+                <a href="#">
+                  <img src="./img/related2.jpg" alt="Image description" />
+                  <span
+                    >Lorem ipsum dolor sit amet consectetur adipiscing
+                    elit.</span
+                  >
+                </a>
+              </div>
+            </div>
+
+            <!-- CATEGORY SELECT -->
+            <div class="catSelect">
+              <span>otras categorías:</span>
+              <button id="btnCategory" data-state="on">
+                - Seleccionar -<i class="fas fa-caret-down"></i>
+              </button>
+              <div>
+                <a href="#">decoración</a>
+                <a href="#">espacios</a>
+                <a href="#">inspiración</a>
+                <a href="#">hecho en méxico</a>
+                <a href="#">tips</a>
+                <a href="#">actualidad</a>
+              </div>
+            </div>
+            <!-- CATEGORY SELECT END -->
+          </div>
+        </div>
+      </section>
+      <!-- RELATED & MORE END -->
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div>
+          <a href="#">
+            <img src="./svg/PMCasa_logo.svg" alt="PM Casa" />
+          </a>
+          <nav>
+            <a href="#">inicio</a>
+            <a href="#">quiénes somos</a>
+            <a href="#">productos</a>
+            <a href="#">blog</a>
+            <a href="#">contacto</a>
+          </nav>
+          <p>Suscríbete a nuestro Newsletter</p>
+          <div>
+            <form action="mainChimpForm.php">
+              <input type="email" placeholder="CORREO ELECTRÓNICO" />
+              <button type="submit">suscribir</button>
+            </form>
+          </div>
+          <div>
+            <strong>SÍGUENOS EN</strong>
+            <a href="#" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+          <p>
+            &copy; 2019 PM Casa, Todos&nbsp;los&nbsp;derechos&nbsp;reservados.
+          </p>
+        </div>
+      </footer>
+      <!-- FOOTER END -->
+    </div>
+    <!-- WRAPPER END -->
+    <!-- NEWSLETTER -->
+    <div class="newsletter">
+      <div>
+        <button id="btnNltrClose">
+          <i class="fas fa-times"></i>
+        </button>
+        <span>
+          <img src="./svg/PMCasa_logo.svg" alt="PM Casa" />
+        </span>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat
+            purus vitae magna vulputate sagittis.
+          </p>
+          <div>
+            <form action="mainChimpForm.php">
+              <input type="text" placeholder="CORREO ELECTRÓNICO" />
+              <button type="submit">suscribir</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- NEWSLETTER END -->
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>

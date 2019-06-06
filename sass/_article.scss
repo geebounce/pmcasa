@@ -1,0 +1,298 @@
+article {
+  background: $paperWhite;
+
+  > div {
+    @include flexCenter(column);
+    @include widthWrapper(1400px);
+    padding: 50px 20px;
+    box-sizing: border-box;
+    font-family: $fontCabin;
+    text-align: center;
+
+    > h6 {
+      @extend %categoryTag;
+    }
+
+    > strong {
+      @extend %titleTag;
+    }
+
+    > h2 {
+      @include headerTag(2rem, 2.5rem);
+      max-width: 860px;
+
+      @include mQ(800px) {
+        font-size: 1.4rem;
+        line-height: 2rem;
+      }
+    }
+
+    .share {
+      margin-bottom: 20px;
+
+      span {
+        display: inline-block;
+        font-size: 0.6rem;
+        letter-spacing: 2px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 8px;
+        color: $mainGreen;
+      }
+    }
+
+    img.featured, div.featured {
+      width: 100%;
+      display: block;
+      margin-bottom: 30px;
+
+      @include mQ(800px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    div.featured {
+      position: relative;
+      padding-top: 56.25%;
+
+      div {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    div.articleWrap {
+      max-width: 900px;
+      margin: auto;
+      font-size: 1rem;
+
+      p {
+        @include paragraphTag(1rem);
+        letter-spacing: 2px;
+        text-align: justify;
+
+        a {
+          display: inline-block;
+        }
+
+        em {
+          font-style: italic;
+          color: $mediumGray;
+        }
+
+        strong {
+          font-weight: bold;
+        }
+      }
+
+      > a {
+        margin-bottom: 30px;
+      }
+
+      a {
+        max-width: 760px;
+        letter-spacing: 1px;
+        margin: auto;
+        display: block;
+        text-align: left;
+        color: $darkOrange;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      figure {
+        width: 100%;
+        display: block;
+        margin-bottom: 30px;
+      }
+
+      figure img {
+        width: 100%;
+        display: block;
+      }
+
+      figcaption {
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+        letter-spacing: 1px;
+        font-style: italic;
+        margin-top: 10px;
+        color: lighten($mediumGray, 20%);
+        cursor: default;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-align: left;
+      }
+
+      h1 {
+        @include articleHeader(2rem, 2.8rem);
+
+        @include mQ(800px) {
+          @include articleHeader(1.8rem, 2.6rem);
+        }
+      }
+
+      h2 {
+        @include articleHeader(1.8rem, 2.6rem);
+        @include mQ(800px) {
+          @include articleHeader(1.6rem, 2.4rem);
+        }
+      }
+
+      h3 {
+        @include articleHeader(1.6rem, 2.4rem);
+
+        @include mQ(800px) {
+          @include articleHeader(1.4rem, 2.2rem);
+        }
+      }
+
+      h4 {
+        @include articleHeader(1.4rem, 2.2rem);
+
+        @include mQ(800px) {
+          @include articleHeader(1.2rem, 2rem);
+        }
+      }
+
+      h5 {
+        @include articleHeader(1.2rem, 2rem);
+
+        @include mQ(800px) {
+          @include articleHeader(1rem, 1.8rem);
+        }
+      }
+
+      h6 {
+        @include articleHeader(1rem, 1.8rem);
+
+        @include mQ(800px) {
+          @include articleHeader(0.9rem, 1.6rem);
+        }
+      }
+
+      blockquote {
+        max-width: 760px;
+        font-style: italic;
+        margin: auto auto 30px auto;
+        padding: 10px 20px;
+        border-left: 5px solid $lightGray;
+
+        p {
+          margin-bottom: 0px;
+          color: $mediumGray;
+        }
+      }
+
+      table {
+        width: 100%;
+        max-width: 760px;
+        margin: auto auto 30px auto;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        line-height: 1.3rem;
+        color: $mainGreen;
+        cursor: default;
+
+        th {
+          font-family: $fontHandlee;
+        }
+
+        tr {
+          border-bottom: 1px solid $lightGray;
+        }
+
+        th,
+        td {
+          padding: 10px;
+          text-align: left;
+        }
+      }
+
+      ul,
+      ol {
+        width: 100%;
+        max-width: 760px;
+        margin: auto auto 30px auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+        text-align: left;
+        font-size: 1rem;
+        line-height: 2rem;
+        letter-spacing: 1px;
+        list-style-position: outside;
+        color: $mediumGray;
+      }
+
+      li ul,
+      li ol {
+        margin-bottom: 0;
+      }
+
+      ul {
+        list-style-type: disc;
+      }
+
+      ol {
+        list-style-type: decimal;
+      }
+
+      pre {
+        width: 100%;
+        max-width: 760px;
+        margin: auto auto 30px auto;
+        display: block;
+        text-align: left;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        line-height: 1.4rem;
+        padding: 9.5px;
+        box-sizing: border-box;
+        overflow: auto;
+        border: 1px solid $grayBorder;
+        word-break: break-all;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+        background-color: lighten($lightGray, 3%);
+        color: $mediumGray;
+      }
+
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+
+      sub {
+        bottom: -0.25em;
+      }
+
+      sup {
+        top: -0.5em;
+      }
+    }
+  }
+}

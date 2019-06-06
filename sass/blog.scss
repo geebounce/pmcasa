@@ -1,0 +1,39 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "header";
+@import "newsletter";
+@import "slider";
+@import "categorySelect";
+@import "postTimeline";
+@import "article";
+@import "ontraportForm";
+@import "related";
+@import "footer";
+
+body {
+  padding-top: 154px;
+  transition: padding-top 0.2s;
+  -webkit-font-smoothing: antialiased;
+  ::selection {
+    background: $selectionBG;
+    color: $selectionColor;
+  }
+
+  @include mQ(1300px) {
+    padding-top: 124px;
+  }
+
+  @include mQ(800px) {
+    padding-top: 60px;
+  }
+}
+
+body.hideScroll {
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: column;
+}

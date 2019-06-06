@@ -1,0 +1,72 @@
+.related {
+  display: flex;
+  background: $paperWhite;
+
+  > div {
+    @include widthWrapper(960px);
+    padding-top: 40px;
+    text-align: center;
+
+    > h3 {
+      @extend %titleTag;
+    }
+
+    > div.relPosts {
+      margin-bottom: 40px;
+    }
+
+    > div.relPosts > div {
+      @include flexCenter(row);
+      width: 100%;
+      margin-bottom: 80px;
+
+      @include mQ(700px) {
+        flex-flow: column;
+        margin-bottom: 40px;
+      }
+
+      a {
+        display: inline-block;
+        padding: 0 20px;
+        box-sizing: border-box;
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+        text-align: left;
+        line-height: 1.8rem;
+        font-family: $fontHandlee;
+        color: $mainGreen;
+        transition: all 0.2s;
+
+        @include mQ(700px) {
+          width: 100%;
+          margin-bottom: 40px;
+          text-align: center;
+          font-size: 1.1rem;
+        }
+
+        &:hover {
+          opacity: 0.95;
+        }
+
+        &:hover span {
+          text-decoration: underline;
+        }
+      }
+
+      img {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+
+        @include mQ(700px) {
+          margin-bottom: 10px;
+        }
+      }
+
+      span {
+        display: inline-block;
+        padding: 0 10px;
+      }
+    }
+  }
+}
