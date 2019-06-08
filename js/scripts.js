@@ -18,9 +18,9 @@ var Navigation = function() {
 };
 
 Navigation.prototype = {
-  setup: function () {
-    this.navMobile.setAttribute('style', 'display:block;');
-    this.newsLtr.setAttribute('style', 'display:block;');
+  setup: function() {
+    this.navMobile.setAttribute("style", "display:block;");
+    this.newsLtr.setAttribute("style", "display:block;");
     this.btnFind.addEventListener(
       "click",
       function() {
@@ -72,7 +72,7 @@ Navigation.prototype = {
     );
     this.btnNewsltrAlt.addEventListener(
       "click",
-      function () {
+      function() {
         this.btnMenu.setAttribute("data-state", "off");
         this.body.setAttribute("class", "hideScroll");
         this.navMobile.setAttribute("class", "navMobile");
@@ -81,7 +81,7 @@ Navigation.prototype = {
     );
     this.btnNltrClose.addEventListener(
       "click",
-      function () {
+      function() {
         this.newsLtr.setAttribute("class", "newsletter");
         this.wrapper.setAttribute("class", "wrapper");
         this.body.removeAttribute("class");
@@ -127,8 +127,10 @@ Navigation.prototype = {
 
 // CATEGORY SELECT PROTOTYPE
 var CategorySelect = function() {
-  this.btnCategory = document.getElementById("btnCategory");
-  this.setup();
+  if (document.getElementsByClassName("catSelect").length === 1) {
+    this.btnCategory = document.getElementById("btnCategory");
+    this.setup();
+  }
 };
 CategorySelect.prototype = {
   setup: function() {
@@ -234,9 +236,54 @@ Slider.prototype = {
 };
 // SLIDER PROTOTYPE END
 
+// SEARCH FILTER PROTOTYPE
+var SearchFilter = function() {
+  if (document.getElementsByClassName("searchRes").length === 1) {
+    this.chk1 = document.getElementById("chk1");
+    this.chk2 = document.getElementById("chk2");
+    this.btnChk1 = document.getElementById("btnChk1");
+    this.btnChk2 = document.getElementById("btnChk2");
+    this.setup();
+  }
+};
+SearchFilter.prototype = {
+  setup: function() {
+    this.btnChk1.addEventListener(
+      "click",
+      function() {
+        if (this.btnChk1.getAttribute("data-state") === "on") {
+          this.btnChk1.setAttribute("data-state", "off");
+          this.btnChk1.removeAttribute("class");
+          this.chk1.checked = false;
+        } else {
+          this.btnChk1.setAttribute("data-state", "on");
+          this.btnChk1.setAttribute("class", "checked");
+          this.chk1.checked = true;
+        }
+      }.bind(this)
+    );
+    this.btnChk2.addEventListener(
+      "click",
+      function() {
+        if (this.btnChk2.getAttribute("data-state") === "on") {
+          this.btnChk2.setAttribute("data-state", "off");
+          this.btnChk2.removeAttribute("class");
+          this.chk2.checked = false;
+        } else {
+          this.btnChk2.setAttribute("data-state", "on");
+          this.btnChk2.setAttribute("class", "checked");
+          this.chk2.checked = true;
+        }
+      }.bind(this)
+    );
+  }
+};
+// SEARCH FILTER PROTOTYPE END
+
 //PROTOTYPES INSTANTIATION
 document.addEventListener("DOMContentLoaded", function() {
   new Navigation();
   new CategorySelect();
   new Slider();
+  new SearchFilter();
 });

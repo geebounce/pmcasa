@@ -1,0 +1,209 @@
+.searchRes {
+  @include flexCenter(column);
+}
+
+.topCtrls {
+  width: 100%;
+  @include flexCenter(row);
+  @extend %pixelBorder;
+  background-color: #f9f9f9;
+
+  > div {
+    @include widthWrapper(690px);
+    padding: 60px 20px 30px 20px;
+    box-sizing: border-box;
+
+    @include mQ(800px) {
+      padding-top: 30px;
+    }
+
+    h1 {
+      @include headerTag(1.6rem, 2rem);
+
+      @include mQ(800px) {
+        font-size: 1.4rem;
+      }
+
+      @include mQ(445px) {
+        text-align: center;
+      }
+    }
+
+    form {
+      @include flexCenter(row);
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    form input {
+      @include textInput(1rem, 1);
+      text-align: left;
+      border: 1px solid $mainGreen;
+      flex-basis: 100%;
+      margin: 0 0 10px 0;
+
+      @include mQ(450px) {
+        margin-bottom: 0;
+      }
+    }
+
+    form > div {
+      @include flexCenter(row);
+
+      @include mQ(450px) {
+        flex-basis: 100%;
+        padding: 20px 0;
+        justify-content: initial;
+      }
+    }
+
+    form > div > span {
+      @include flexCenter(row);
+      justify-content: flex-start;
+      margin-left: 0;
+      font-family: $fontCabin;
+      font-size: 0.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: default;
+
+      input {
+        display: none;
+      }
+
+      button {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        margin-right: 10px;
+        text-align: center;
+        cursor: pointer;
+        background: $mainGreen;
+
+        &:hover {
+          background-color: lighten($mainGreen, 10%);
+        }
+      }
+
+      button i {
+        visibility: hidden;
+        font-size: 0.8rem;
+        line-height: 25px;
+        color: white;
+      }
+
+      button.checked {
+        i {
+          visibility: visible;
+        }
+      }
+    }
+
+    form > div > span:first-child {
+      margin-right: 30px;
+    }
+
+    form button[type="submit"] {
+      @extend %buttonFind;
+      width: auto;
+      font-weight: bold;
+      letter-spacing: 2px;
+      padding: 0 40px;
+      margin-right: 0;
+
+      @include mQ(450px) {
+        flex-basis: 100%;
+      }
+    }
+  }
+}
+
+.resBox {
+  width: 100%;
+  background: $paperWhite;
+
+  > div {
+    @include widthWrapper(690px);
+    padding: 20px;
+    box-sizing: border-box;
+
+    p {
+      font-family: $fontCabin;
+      font-size: 0.86rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $mainGreen;
+
+      @include mQ(500px) {
+        margin-bottom: 16px;
+      }
+
+      span {
+        margin: 0 5px 0 10px;
+        color: $darkOrange;
+      }
+    }
+  }
+
+  > div > a {
+    @include flexCenter(row);
+    @extend %pixelBorder;
+    @include headerTag(1.1rem, 1.8rem);
+    align-items: flex-start;
+    padding: 30px 0;
+    margin: 0;
+    cursor: pointer;
+    color: $mainGreen;
+
+    &:hover {
+      text-decoration: underline;
+
+      img {
+        filter: brightness(110%);
+      }
+    }
+
+    @include mQ(500px) {
+      padding: 10px 0;
+      @include headerTag(0.9rem, 1.5rem);
+    }
+
+    @include mQ(400px) {
+      @include headerTag(0.8rem, 1.3rem);
+    }
+
+    img {
+      height: 126px;
+      margin: 0 14px 0 0;
+      transition: all 0.2s;
+
+      @include mQ(800px) {
+        height: 100px;
+      }
+
+      @include mQ(500px) {
+        height: 80px;
+      }
+
+      @include mQ(400px) {
+        height: 60px;
+      }
+    }
+
+    strong {
+      display: block;
+      font-family: $fontCabin;
+      font-size: 0.76rem;
+      line-height: 1.6rem;
+      font-weight: bold;
+      text-transform: uppercase;
+
+      @include mQ(500px) {
+        font-size: 0.65rem;
+        line-height: 1.3rem;
+      }
+    }
+  }
+}

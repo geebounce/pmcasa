@@ -169,7 +169,7 @@ header {
 
     input {
       @include textInput(1.5rem, 0);
-      border: 1px solid $grayBorder;
+      border: 1px solid $mainGreen;
       width: 400px;
     }
 
@@ -281,7 +281,7 @@ nav.navMobile {
     input {
       @include textInput(1rem, 1);
       text-align: left;
-      border: 1px solid $grayBorder;
+      border: 1px solid $mainGreen;
     }
 
     button {

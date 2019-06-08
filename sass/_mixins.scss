@@ -195,6 +195,8 @@
 
 %pixelBorder {
   background-image: url("data:image/png;base64,#{$pixelBorder}");
+  background-position: bottom left;
+  background-repeat: repeat-x;
 }
 
 %pixelBorderTB {
