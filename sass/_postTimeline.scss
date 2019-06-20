@@ -19,6 +19,14 @@
 
     h6 {
       @extend %categoryTag;
+
+      a{
+        color: $mainGreen;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
 
     strong {
