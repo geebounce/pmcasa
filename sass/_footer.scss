@@ -57,7 +57,7 @@ footer.footer {
     }
 
     div {
-      width: 100%;
+      @include widthWrapper(550px);
       display: block;
       margin-bottom: 40px;
 

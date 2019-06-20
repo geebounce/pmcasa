@@ -5,7 +5,6 @@
 
   > div {
     @include flexCenter(row);
-    @include widthWrapper(900px);
     align-items: flex-start;
     padding: 50px 0;
 

@@ -62,7 +62,7 @@
       }
 
       div {
-        @include widthWrapper(470px);
+        @include widthWrapper(550px);
 
         form {
           @include flexCenter(row);
