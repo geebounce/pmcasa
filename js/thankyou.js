@@ -11,7 +11,6 @@ ThankyouPage.prototype = {
   setup: function () {
     var urlParams = new URLSearchParams(location.search);
     if (urlParams.has('m')) { 
-      console.log('yes');
       this.message.innerHTML = atob(urlParams.get('m'));
     }
     this.continue.addEventListener('click', function () {

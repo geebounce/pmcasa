@@ -30,6 +30,7 @@
     display: block;
     margin-bottom: 40px;
     transition: all 0.2s;
+    cursor: default;
 
     @include mQ(500px) {
       font-size: 1.6rem;
