@@ -21,7 +21,7 @@
 
 @mixin textInput($fSize, $grow) {
   height: 60px;
-  font-family: $fontHandlee;
+  font-family: $fontMontserrat;
   font-size: $fSize;
   letter-spacing: 1px;
   text-align: center;
@@ -44,7 +44,7 @@
   font-size: $fSize;
   line-height: $lHeight;
   letter-spacing: 2px;
-  font-family: $fontHandlee;
+  font-family: $fontMontserrat;
   margin-bottom: 10px;
   cursor: default;
 }
@@ -68,7 +68,7 @@
 }
 
 @mixin articleHeader($fSize, $lHeight) {
-  font-family: $fontHandlee;
+  font-family: $fontMontserrat;
   max-width: 760px;
   margin: auto;
   font-size: $fSize;
@@ -123,7 +123,7 @@
 }
 
 %buttonOrange {
-  font-family: $fontHandlee;
+  font-family: $fontMontserrat;
   font-size: 0.85rem;
   letter-spacing: 3px;
   text-transform: uppercase;
